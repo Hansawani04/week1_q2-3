@@ -1,0 +1,26 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+int avg(vector<int>nums,int n)
+{
+    int i,sum=0;
+    for(int i=0;i<n;i++)
+        sum+=nums[i];
+    int avg=sum/n;
+    return avg;
+}
+int main()
+{
+    vector<int>nums;
+    int n,result,num;
+    cout<<"Enter number of integers in array:";
+    cin>>n;
+    cout<<"Enter elements:";
+    for(int i=0;i<n;i++)
+    {
+        cin>>num;
+        nums.push_back(num);
+    }
+    result=avg(nums,n);
+    cout<<"The average of the entered numbers is="<<result;
+}
